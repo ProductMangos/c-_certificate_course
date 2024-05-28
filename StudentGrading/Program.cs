@@ -35,7 +35,63 @@ loganGrades.ForEach(g => {
     loganSum += g;
 });
 
-Console.WriteLine(sophiaGrades);
+string DetermineLetterGrade(decimal grade)
+{
+    Console.WriteLine($"grade {grade}");
+    if (grade >= 97)
+    {
+        return "A+";
+    } 
+    else if (grade >= 93)
+    {
+        return "A";
+    }
+    else if (grade >= 90)
+    {
+        return "A-";
+    } 
+    else if (grade >= 87)
+    {
+        return "B+";
+    }
+    else if (grade >= 83)
+    {
+        return "B";
+    }
+    else if (grade >= 80)
+    {
+        return "B-";
+    }
+    else if (grade >= 77)
+    {
+        return "C+";
+    }
+    else if (grade >= 73)
+    {
+        return "C";
+    }
+    else if (grade >= 70)
+    {
+        return "C-";
+    }
+    else if (grade >= 67)
+    {
+        return "D+";
+    }
+    else if (grade >= 63)
+    {
+        return "D";
+    }
+    else if (grade >= 60)
+    {
+        return "D-";
+    }
+    else 
+    {
+        return "F";
+    }
+}
+
 
 // sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
 // andrewSum = andrew1 + andrew2 + andrew3 + andrew4 + andrew5;
@@ -48,10 +104,10 @@ emmaScore = (decimal)emmaSum / currentAssignments;
 loganScore = (decimal)loganSum / currentAssignments;
 
 Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
-Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
-Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
+Console.WriteLine("Sophia:\t\t" + sophiaScore + $"\t{DetermineLetterGrade(sophiaScore)}");
+Console.WriteLine("Andrew:\t\t" + andrewScore + $"\t{DetermineLetterGrade(andrewScore)}");
+Console.WriteLine("Emma:\t\t" + emmaScore + $"\t{DetermineLetterGrade(emmaScore)}");
+Console.WriteLine("Logan:\t\t" + loganScore + $"\t{DetermineLetterGrade(loganScore)}");
 
 Console.WriteLine("Press the Enter key to continue");
 Console.ReadLine();
