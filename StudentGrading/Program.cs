@@ -3,6 +3,7 @@
 // initialize variables - graded assignments 
 int currentAssignments = 5;
 
+List<string> students = new(["sophia", "andrew", "emma", "logan"]);
 List<int> sophiaGrades = new([90, 86, 87, 98, 100]);
 List<int> andrewGrades = new([92, 89, 81, 96, 90]);
 List<int> emmaGrades = new([90, 85, 87, 98, 68]);
@@ -17,6 +18,18 @@ decimal sophiaScore;
 decimal andrewScore;
 decimal emmaScore;
 decimal loganScore;
+
+
+(string, int, decimal) StudentInformation(string studentName, List<int> grades, decimal scores)
+{
+    
+}
+
+foreach (string student in students) 
+{
+    if (student == "")
+}
+
 
 
 sophiaGrades.ForEach(g => {
@@ -91,12 +104,6 @@ string DetermineLetterGrade(decimal grade)
         return "F";
     }
 }
-
-
-// sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
-// andrewSum = andrew1 + andrew2 + andrew3 + andrew4 + andrew5;
-// emmaSum = emma1 + emma2 + emma3 + emma4 + emma5;
-// loganSum = logan1 + logan2 + logan3 + logan4 + logan5;
 
 sophiaScore = (decimal)sophiaSum / currentAssignments;
 andrewScore = (decimal)andrewSum / currentAssignments;
