@@ -3,54 +3,13 @@
 // initialize variables - graded assignments 
 int currentAssignments = 5;
 
-List<string> students = new(["sophia", "andrew", "emma", "logan"]);
 List<int> sophiaGrades = new([90, 86, 87, 98, 100]);
 List<int> andrewGrades = new([92, 89, 81, 96, 90]);
 List<int> emmaGrades = new([90, 85, 87, 98, 68]);
 List<int> loganGrades = new([90, 95, 87, 88, 96]);
 
-int sophiaSum = 0;
-int andrewSum = 0;
-int emmaSum = 0;
-int loganSum = 0;
-
-decimal sophiaScore;
-decimal andrewScore;
-decimal emmaScore;
-decimal loganScore;
-
-
-(string, int, decimal) StudentInformation(string studentName, List<int> grades, decimal scores)
-{
-    
-}
-
-foreach (string student in students) 
-{
-    if (student == "")
-}
-
-
-
-sophiaGrades.ForEach(g => {
-    sophiaSum += g;
-});
-
-andrewGrades.ForEach(g => {
-    andrewSum += g;
-});
-
-emmaGrades.ForEach(g => {
-    emmaSum += g;
-});
-
-loganGrades.ForEach(g => {
-    loganSum += g;
-});
-
 string DetermineLetterGrade(decimal grade)
 {
-    Console.WriteLine($"grade {grade}");
     if (grade >= 97)
     {
         return "A+";
@@ -105,16 +64,27 @@ string DetermineLetterGrade(decimal grade)
     }
 }
 
-sophiaScore = (decimal)sophiaSum / currentAssignments;
-andrewScore = (decimal)andrewSum / currentAssignments;
-emmaScore = (decimal)emmaSum / currentAssignments;
-loganScore = (decimal)loganSum / currentAssignments;
+
+void StudentInformation(string studentName, List<int> grades)
+{
+    int totalSum = 0;
+    decimal score;
+
+    foreach (var grade in grades)
+    {
+        totalSum += grade;
+    }
+
+    score = (decimal)totalSum / currentAssignments;
+
+
+    Console.WriteLine($"{studentName}:\t\t" + score + $"\t{DetermineLetterGrade(score)}");
+}
 
 Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Sophia:\t\t" + sophiaScore + $"\t{DetermineLetterGrade(sophiaScore)}");
-Console.WriteLine("Andrew:\t\t" + andrewScore + $"\t{DetermineLetterGrade(andrewScore)}");
-Console.WriteLine("Emma:\t\t" + emmaScore + $"\t{DetermineLetterGrade(emmaScore)}");
-Console.WriteLine("Logan:\t\t" + loganScore + $"\t{DetermineLetterGrade(loganScore)}");
-
+StudentInformation("Sophia", sophiaGrades);
+StudentInformation("Andrew", andrewGrades);
+StudentInformation("Emma", emmaGrades);
+StudentInformation("Logan", loganGrades);
 Console.WriteLine("Press the Enter key to continue");
 Console.ReadLine();
