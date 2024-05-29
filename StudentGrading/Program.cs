@@ -1,12 +1,7 @@
-﻿using System;
-
-// initialize variables - graded assignments 
-int currentAssignments = 5;
-
-List<int> sophiaGrades = new([90, 86, 87, 98, 100]);
-List<int> andrewGrades = new([92, 89, 81, 96, 90]);
-List<int> emmaGrades = new([90, 85, 87, 98, 68]);
-List<int> loganGrades = new([90, 95, 87, 88, 96]);
+﻿int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
+int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
+int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
+int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
 
 string DetermineLetterGrade(decimal grade)
 {
@@ -65,13 +60,15 @@ string DetermineLetterGrade(decimal grade)
 }
 
 
-void StudentInformation(string studentName, List<int> grades)
+void StudentInformation(string studentName, int[] grades)
 {
     int totalSum = 0;
     decimal score;
+    int currentAssignments = 0;
 
     foreach (var grade in grades)
     {
+        currentAssignments++;
         totalSum += grade;
     }
 
@@ -82,9 +79,9 @@ void StudentInformation(string studentName, List<int> grades)
 }
 
 Console.WriteLine("Student\t\tGrade\n");
-StudentInformation("Sophia", sophiaGrades);
-StudentInformation("Andrew", andrewGrades);
-StudentInformation("Emma", emmaGrades);
-StudentInformation("Logan", loganGrades);
+StudentInformation("Sophia", sophiaScores);
+StudentInformation("Andrew", andrewScores);
+StudentInformation("Emma", emmaScores);
+StudentInformation("Logan", loganScores);
 Console.WriteLine("Press the Enter key to continue");
 Console.ReadLine();
