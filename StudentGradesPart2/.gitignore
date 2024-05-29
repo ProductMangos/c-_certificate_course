@@ -1,0 +1,83 @@
+# Ignore Visual Studio temporary files, build results, and
+# build directories
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+.vs/
+TestResults/
+.vscode/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.g.*
+*.gen.cs
+*.designer.cs
+
+# Build results
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+
+# Uncomment if you have tasks that create the project file
+# *.proj
+# *.appx
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows shortcuts
+*.lnk
+
+# Rider
+.idea/
+.idea/*
+
+# Rider specific directories
+.idea/.idea/
+.idea/*
+
+# JetBrains Rider
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/libraries
+.idea/.rider
+.idea/.rider/system
+.idea/.rider/index
+.idea/.rider/workspace
+.idea/.idea
+.idea/.idea/*
+.idea/.idea_modules
+
+# End of file should be a blank line
